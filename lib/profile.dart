@@ -44,7 +44,7 @@ Profile myprofile = Profile(
     id: 1,
     nickname: 'Eva',
     description: mysimpleText,
-    image: "assets/images/Photo_2.jpg",
+    image: "assets/guest_images/guest2.jpg",
     age: 25,
     name: "Ева Абрикосова",
     place: "Москва",

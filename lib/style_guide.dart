@@ -71,6 +71,20 @@ final kMTextStyleBlack6 = TextStyle(
     fontWeight: FontWeight.w600,
     color: Colors.black);
 
+final kMTextStylePink6 = TextStyle(
+    decoration: TextDecoration.none,
+    fontSize: 11,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w600,
+    color: Color(0xFFFF005C));
+
+final kMTextStyleWhite6 = TextStyle(
+    decoration: TextDecoration.none,
+    fontSize: 11,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w600,
+    color: Colors.white);
+
 final kMTextStyleGrey8 = TextStyle(
     decoration: TextDecoration.none,
     fontSize: 8,

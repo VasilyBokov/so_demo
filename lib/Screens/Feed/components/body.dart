@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:so_demo/Screens/EventPage/event_page_f.dart';
+import 'package:so_demo/Screens/Profile/profile_screen.dart';
+import 'package:so_demo/profile.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -11,11 +13,11 @@ class Body extends StatelessWidget {
           child: IconButton(
               iconSize: 30,
               padding: EdgeInsets.all(10.0),
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.picture_in_picture_alt),
               // при нажатии выводится текст в консоль
               // и вызывается новый экран Профиля
               onPressed: () {
-                print("Go to profile");
+                print("Go to event");
                 Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -30,11 +32,18 @@ class Body extends StatelessWidget {
           child: IconButton(
               iconSize: 30,
               padding: EdgeInsets.all(10.0),
-              icon: Icon(Icons.picture_in_picture),
+              icon: Icon(Icons.person_add),
               // при нажатии выводится текст в консоль
               // и вызывается новый экран Профиля
               onPressed: () {
-                print("Go event");
+                print("Go profile");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ProfileScreen(
+                              profile: profiles[0],
+                              myprofile: myprofile,
+                            )));
                 // Navigator.push(
                 //     context,
                 //     MaterialPageRoute(
