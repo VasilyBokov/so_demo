@@ -36,6 +36,40 @@ List<Profile> profiles = [
       subscriptions: [
         'ulov_nalimov'
       ]),
+  Profile(
+      id: 3,
+      nickname: 'rovniy_pacan',
+      description: simpleText,
+      image: "assets/guest_images/guest2.jpg",
+      age: 14,
+      name: "Хуй Длинный",
+      place: "Москва",
+      subscribers: [
+        'Mamin_sympotaga',
+        'Papin_robotyaga',
+        'razvod_debilov',
+        'zagon_baranov'
+      ],
+      subscriptions: [
+        'ulov_nalimov'
+      ]),
+  Profile(
+      id: 4,
+      nickname: 'gnu_relsi',
+      description: simpleText,
+      image: "assets/guest_images/guest4.jpg",
+      age: 14,
+      name: "Ваш Друг",
+      place: "Москва",
+      subscribers: [
+        'Mamin_sympotaga',
+        'Papin_robotyaga',
+        'razvod_debilov',
+        'zagon_baranov'
+      ],
+      subscriptions: [
+        'ulov_nalimov'
+      ]),
 ];
 
 String simpleText = "Описание пользователя какой он хороший человек";
@@ -44,7 +78,7 @@ Profile myprofile = Profile(
     id: 1,
     nickname: 'Eva',
     description: mysimpleText,
-    image: "assets/guest_images/guest2.jpg",
+    image: "assets/guest_images/guest3.jpg",
     age: 25,
     name: "Ева Абрикосова",
     place: "Москва",

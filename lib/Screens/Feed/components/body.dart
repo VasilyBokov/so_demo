@@ -4,6 +4,10 @@ import 'package:so_demo/Screens/Profile/profile_screen.dart';
 import 'package:so_demo/profile.dart';
 
 class Body extends StatelessWidget {
+  // профиль под которым выполнен вход в приложение
+  final Profile myprofile;
+  const Body({Key key, this.myprofile}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -23,7 +27,7 @@ class Body extends StatelessWidget {
                     MaterialPageRoute(
                       // открываем экран профия
                       builder: (context) => EventPageWithFoto(
-                          // для тестового примера запускаем первый из профилей
+                          // для тестового примера
                           ),
                     ));
               }),

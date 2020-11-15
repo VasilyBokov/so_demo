@@ -29,6 +29,13 @@ final kMTextStyleBlack2 = TextStyle(
     fontWeight: FontWeight.w600,
     color: Colors.black);
 
+final kMTextStyleBlack4 = TextStyle(
+    decoration: TextDecoration.none,
+    fontSize: 17,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w600,
+    color: Colors.black);
+
 final kMTextStyleWhite5 = TextStyle(
     decoration: TextDecoration.none,
     fontSize: 14,

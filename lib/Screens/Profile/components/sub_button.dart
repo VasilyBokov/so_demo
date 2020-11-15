@@ -66,7 +66,7 @@ class TapBox extends StatelessWidget {
     if (myprofile.subscriptions.contains(profile.nickname)) {
       return Container(
         height: size.width * 0.089,
-        width: size.width * 0.41,
+        width: size.width * 0.39,
         // окантовка для кнопки
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -81,6 +81,7 @@ class TapBox extends StatelessWidget {
             children: [
               Icon(
                 Icons.done_sharp,
+                size: 17,
                 color: Color.fromRGBO(244, 29, 96, 1),
               ),
               Text("Вы подписаны", style: kMTextStylePink6),
@@ -102,7 +103,7 @@ class TapBox extends StatelessWidget {
           ],
         ),
         height: size.width * 0.089,
-        width: size.width * 0.41,
+        width: size.width * 0.39,
         child: FlatButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

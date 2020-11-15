@@ -5,6 +5,8 @@ import 'package:so_demo/Screens/Profile/components/sub_button.dart';
 import 'package:so_demo/Screens/Profile/components/subscribers_place.dart';
 import 'package:so_demo/profile.dart';
 
+import '../../../style_guide.dart';
+
 class Body extends StatelessWidget {
   final Profile profile;
   final Profile mypofile;
@@ -14,7 +16,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // для корректного отображения фото выбранного профиля
         // передаем размер экрана и данные профиля
@@ -29,7 +31,33 @@ class Body extends StatelessWidget {
         // для корректного отображения состояния
         // подписки на выбранный профиль
         // передаем размер, данные моего_профиля и данные профиля
-        WidgetWithButton(size: size, myprofile: myprofile, profile: profile)
+        WidgetWithButton(size: size, myprofile: myprofile, profile: profile),
+        Padding(
+          padding: EdgeInsets.only(left: 15, top: 30),
+          child: Text(
+            "Предстоящие",
+            style: kMTextStyleBlack4,
+          ),
+        ),
+        // Event mini cart
+        Container(
+          padding: EdgeInsets.only(left: 15, top: 15, bottom: 15),
+          color: Colors.green,
+          // Элементы карточки в стоку
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(profiles[1].image),
+                ),
+              ),
+              Column(
+                children: [Text("123"), Text("data")],
+              )
+            ],
+          ),
+        )
       ],
     );
   }

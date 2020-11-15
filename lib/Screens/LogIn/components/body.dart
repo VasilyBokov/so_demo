@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:so_demo/Screens/Feed/feed_screen.dart';
 import 'package:so_demo/Screens/LogIn/components/background.dart';
 import 'package:so_demo/Screens/SignUp/signup_screen.dart';
 import 'package:so_demo/components/clickable_text.dart';
@@ -48,6 +49,11 @@ class Body extends StatelessWidget {
                 // необходимо как то добавлять статус входа!!!
                 if (login.inputed_text == myprofile.nickname &&
                     pass.inputed_text == myprofile.password) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              FeedScreen(myprofile: myprofile)));
                   print("Go in");
                 } else {
                   print("What a pity!");
