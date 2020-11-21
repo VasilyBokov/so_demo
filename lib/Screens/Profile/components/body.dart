@@ -5,7 +5,10 @@ import 'package:so_demo/Screens/Profile/components/sub_button.dart';
 import 'package:so_demo/Screens/Profile/components/subscribers_place.dart';
 import 'package:so_demo/profile.dart';
 
+<<<<<<< HEAD
 import '../../../event.dart';
+=======
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
 import '../../../style_guide.dart';
 
 class Body extends StatelessWidget {
@@ -41,6 +44,7 @@ class Body extends StatelessWidget {
           ),
         ),
         // Event mini cart
+<<<<<<< HEAD
         EventMiniCard(
           event: events[0],
         ),
@@ -200,6 +204,27 @@ class EventMiniCard extends StatelessWidget {
           ],
         ),
       ),
+=======
+        Container(
+          padding: EdgeInsets.only(left: 15, top: 15, bottom: 15),
+          color: Colors.green,
+          // Элементы карточки в стоку
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(profiles[1].image),
+                ),
+              ),
+              Column(
+                children: [Text("123"), Text("data")],
+              )
+            ],
+          ),
+        )
+      ],
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
     );
   }
 }

@@ -21,20 +21,31 @@ class Event {
 List<Event> events = [
   Event(
     id: 1,
+<<<<<<< HEAD
     category: "прогулка",
     time: "завтра в 18:00",
+=======
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
     hostNick: "rovniy_pacan",
     description: simpleText,
     participantsLimit: 32,
     currentParticipansNumber: 26,
     images: [
+<<<<<<< HEAD
       // "assets/event_images/5_km_downtown_run.jpeg",
+=======
+      "assets/event_images/5_km_downtown_run.jpeg",
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
       "assets/event_images/cooking_1.jpeg",
       "assets/event_images/cooking_2.jpeg",
       "assets/event_images/cooking_3.jpeg",
     ],
     name: "Танцы в косерватории имени Ленина",
+<<<<<<< HEAD
     place: "КиЛ",
+=======
+    place: "Консерватория имени Ленина",
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
     participantsNicks: [
       'Mamin_sympotaga',
       'Papin_robotyaga',
@@ -43,9 +54,13 @@ List<Event> events = [
     ],
   ),
   Event(
+<<<<<<< HEAD
     id: 2,
     category: "спорт",
     time: "сегодня в 12:00",
+=======
+    id: 1,
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
     hostNick: "@mutniy_typ",
     description: simpleText,
     participantsLimit: 10,

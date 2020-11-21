@@ -122,6 +122,7 @@ final kParagraphTextStyleGrey2 = TextStyle(
     letterSpacing: 0.5,
     height: 2,
     color: Color(0xFF666B78));
+<<<<<<< HEAD
 // хуйня sf-pro
 final kParagraphTextStyleGrey6 = TextStyle(
     decoration: TextDecoration.none,
@@ -139,3 +140,5 @@ final kParagraphTextStyleGrey7 = TextStyle(
     letterSpacing: 0.5,
     height: 1,
     color: Color(0xFF9196A0));
+=======
+>>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
