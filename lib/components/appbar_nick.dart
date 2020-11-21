@@ -18,11 +18,7 @@ class ProfileAppBar extends PreferredSize {
     return Container(
       // Согласно аркаше, высота статус бара равена 0.1 высоты всего экрана
       height: size.height * 0.1,
-<<<<<<< HEAD
       // color: Colors.blue[100],
-=======
-      color: Colors.white,
->>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
       child: Column(
         children: [
           // верхний отступ для отступа от статус бара
@@ -41,11 +37,7 @@ class ProfileAppBar extends PreferredSize {
               children: [
                 // кнопка возврата
                 Container(
-<<<<<<< HEAD
                   // color: Colors.green[100],
-=======
-                  color: Colors.white,
->>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
                   child: IconButton(
                     color: Colors.black,
                     icon: Icon(
@@ -62,22 +54,13 @@ class ProfileAppBar extends PreferredSize {
                   child: Container(
                     // никнейм пользователя отображается по центру
                     // к названию в начале прибавляем символ at
-<<<<<<< HEAD
                     // color: Colors.red[100],
-=======
-                    color: Colors.white,
->>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
                     alignment: Alignment.center,
                     child: Center(
                       child: Padding(
                         padding: EdgeInsets.only(
-<<<<<<< HEAD
                             top: size.width * 0.0156,
                             bottom: size.width * 0.0203),
-=======
-                            top: size.height * 0.0156,
-                            bottom: size.height * 0.0203),
->>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
                         child: Text(
                           '@' + profile.nickname,
                           style: kMTextStyleBlack5,

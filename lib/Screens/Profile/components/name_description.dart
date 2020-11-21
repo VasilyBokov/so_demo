@@ -33,11 +33,7 @@ class NameAndDescription extends StatelessWidget {
               //
               Column(
                 children: [
-<<<<<<< HEAD
                   // имя профиля
-=======
-                  // имя профидя
->>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
                   Padding(
                     padding: EdgeInsets.only(bottom: 8.0),
                     child: Container(
@@ -50,18 +46,11 @@ class NameAndDescription extends StatelessWidget {
                   ),
                   // описание профиля
                   Container(
-<<<<<<< HEAD
                     width: size.width * 0.6,
                     color: Colors.white,
                     child: Text(profile.description,
                         textAlign: TextAlign.center,
                         style: kParagraphTextStyleGrey6),
-=======
-                    width: size.width * 0.4,
-                    color: Colors.white,
-                    child: Text(profile.description,
-                        textAlign: TextAlign.center, style: kMTextStyleGrey8),
->>>>>>> c3c64fed6182410a515d678f368f704d9c124a28
                   )
                 ],
               ),
