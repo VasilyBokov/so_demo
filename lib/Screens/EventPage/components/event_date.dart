@@ -22,6 +22,9 @@ class EventDate extends StatelessWidget {
         ),
         elevation: 1,
         child: Row(
+          // Сеиен: я добавил  mainAxisAligement, чтобы эдементы располагались
+          // как можго дальше друг от друга
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -42,16 +45,17 @@ class EventDate extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              width: 70,
-            ),
-            JoinButton(
-              simpleevent: events[0],
-              myprofile: profiles[0],
-              buttonheight1: 44,
-              buttonwidth1: 98,
-              buttonheight2: 44,
-              buttonwidth2: 85,
+            // Сема: добавил для отступа справа
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: JoinButton(
+                simpleevent: events[0],
+                myprofile: profiles[0],
+                buttonheight1: 44,
+                buttonwidth1: 98,
+                buttonheight2: 44,
+                buttonwidth2: 85,
+              ),
             )
           ],
         ),

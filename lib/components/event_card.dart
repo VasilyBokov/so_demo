@@ -118,7 +118,7 @@ class EventMiniCard extends StatelessWidget {
                 ),
                 // иконки и число гостей
                 Container(
-                  padding: EdgeInsets.only(top: 17, bottom: 6),
+                  padding: EdgeInsets.only(top: 25, bottom: 6),
                   height: size.width * 0.225,
                   color: Colors.white,
                   child: Column(
@@ -134,7 +134,7 @@ class EventMiniCard extends StatelessWidget {
                           Icon(
                             Icons.person,
                             color: Color(0xFFC2C6CC),
-                            size: 11,
+                            size: 12,
                           ),
                           Text(
                             event.participantsNicks.length.toString(),
@@ -151,7 +151,7 @@ class EventMiniCard extends StatelessWidget {
               // color: Colors.red,
               child: Divider(
                 height: 12,
-                color: Colors.grey,
+                color: Color(0xFFC2C6CC),
               ),
             )
           ],
@@ -214,7 +214,7 @@ class BookMarkWidget extends StatelessWidget {
         onTap: onChanged,
         child: Icon(
           Icons.bookmark_rounded,
-          size: 22,
+          size: 28,
         ),
       );
     } else {
@@ -223,7 +223,7 @@ class BookMarkWidget extends StatelessWidget {
           onTap: onChanged,
           child: Icon(
             Icons.bookmark_border_rounded,
-            size: 22,
+            size: 28,
           ),
         ),
       );
