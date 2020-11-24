@@ -18,7 +18,10 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
-          //SvgPicture.asset("assets/images/big_black.svg"),
+          // Container(
+          //   width: size.width,
+          //   child: SvgPicture.asset("assets/images/big_black.svg")
+          //   ),
           child,
         ],
       ),

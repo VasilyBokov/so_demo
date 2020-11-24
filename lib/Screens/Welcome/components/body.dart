@@ -58,7 +58,7 @@ class Body extends StatelessWidget {
               SizedBox(height: 50),
               ClickableText(
                 text: "Пропустить",
-                textStyle: kMTextStyleGrey8,
+                textStyle: kMTextStyleWhite5,
                 press: () {
                   //Просто переходит на другой экран
                   Navigator.push(

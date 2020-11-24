@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../event.dart';
 import '../profile.dart';
@@ -19,9 +20,13 @@ class EventMiniCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // три строчки для скалирования шрифтов
+    WidgetsFlutterBinding.ensureInitialized();
+    ScreenUtil.init(context,
+        designSize: Size(360, 720), allowFontScaling: true);
     Size size = MediaQuery.of(context).size;
-    print("width is " + size.width.toString());
-    print("height is " + size.height.toString());
+    // print("width is " + size.width.toString());
+    // print("height is " + size.height.toString());
     return Padding(
       padding:
           EdgeInsets.only(left: size.width * 0.04, right: size.width * 0.04),
@@ -68,7 +73,7 @@ class EventMiniCard extends StatelessWidget {
                         ),
                         Text(
                           event.name,
-                          style: kMTextStyleBlack5,
+                          style: kMTextStyleBlack4,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5),

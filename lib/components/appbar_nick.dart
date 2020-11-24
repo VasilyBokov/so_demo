@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../profile.dart';
 import '../style_guide.dart';
@@ -14,6 +15,9 @@ class ProfileAppBar extends PreferredSize {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsFlutterBinding.ensureInitialized();
+    ScreenUtil.init(context,
+        designSize: Size(360, 720), allowFontScaling: true);
     Size size = MediaQuery.of(context).size;
     return Container(
       // Согласно аркаше, высота статус бара равена 0.1 высоты всего экрана

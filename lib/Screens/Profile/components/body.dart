@@ -17,9 +17,11 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Для корректного скалирования щрифта необходимо добавить 3 строчки ниже
     WidgetsFlutterBinding.ensureInitialized();
     ScreenUtil.init(context,
         designSize: Size(360, 720), allowFontScaling: true);
+    // хотя в первой из 3 строчек я не уверен
     Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

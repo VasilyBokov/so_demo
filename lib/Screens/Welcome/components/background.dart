@@ -16,10 +16,13 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
-          Container(
-              width: 200,
-              height: 200,
-              child: SvgPicture.asset("assets/images/logo_so.svg")),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 70),
+            child: Container(
+                width: size.width,
+                // height: 200,
+                child: SvgPicture.asset("assets/images/logo_so.svg")),
+          ),
           child
         ],
       ),
