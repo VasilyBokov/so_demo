@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:so_demo/Screens/Welcome/welome_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// Это должно помочь определиться со скалированием шрифта
+// нужно вставить в нужном виджите
+// WidgetsFlutterBinding.ensureInitialized();
+// ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: true);
+
 // думается мне что необходимо раздлить описание класса профиля
 // и создание представителей класса профиль
 // чтобы не возникала путанница

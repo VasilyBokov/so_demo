@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //Montserrat
 final kMTextStyleWhite1 = TextStyle(
@@ -24,7 +25,9 @@ final kMTextStyleWhite2 = TextStyle(
 
 final kMTextStyleBlack2 = TextStyle(
     decoration: TextDecoration.none,
-    fontSize: 20,
+    fontSize:
+        // 20,
+        ScreenUtil().setSp(20, allowFontScalingSelf: true),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
     color: Colors.black);

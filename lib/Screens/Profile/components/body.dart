@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:so_demo/Screens/Profile/components/image.dart';
 import 'package:so_demo/Screens/Profile/components/name_description.dart';
 import 'package:so_demo/Screens/Profile/components/sub_button.dart';
@@ -16,6 +17,9 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsFlutterBinding.ensureInitialized();
+    ScreenUtil.init(context,
+        designSize: Size(360, 720), allowFontScaling: true);
     Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

@@ -16,7 +16,10 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
-          SvgPicture.asset("assets/images/palm-tree.svg"),
+          Container(
+              width: 200,
+              height: 200,
+              child: SvgPicture.asset("assets/images/logo_so.svg")),
           child
         ],
       ),
