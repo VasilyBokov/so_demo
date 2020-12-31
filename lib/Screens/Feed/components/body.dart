@@ -18,10 +18,29 @@ class Body extends StatelessWidget {
         designSize: Size(360, 720), allowFontScaling: true);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(
-          height: 100,
+        Padding(
+          padding: EdgeInsets.only(left: 5, top: 25),
+          child: Container(
+            // color: Colors.red[50],
+            // height: 100,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  iconSize: 25,
+                  icon: SvgPicture.asset("assets/icons/notification.svg"),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  iconSize: 25,
+                  icon: SvgPicture.asset("assets/icons/profile.svg"),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
