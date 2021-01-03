@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:so_demo/components/carousel_gallery.dart';
 
 import '../event.dart';
 import '../profile.dart';
@@ -35,6 +36,8 @@ class EventMiniCard extends StatelessWidget {
         // Элементы карточки в стоку и внизу разделительная полоса
         child: Column(
           children: [
+            // проверят, если ли фотки, если да, отображает галерею
+            if (event.withfoto == true) ImageSliderCard(),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:so_demo/Screens/EventPage/event_page_f.dart';
+import 'package:so_demo/Screens/EventPage/event_page.dart';
 import 'package:so_demo/Screens/Profile/profile_screen.dart';
+import 'package:so_demo/event.dart';
 import 'package:so_demo/profile.dart';
 
 class Body extends StatelessWidget {
   // профиль под которым выполнен вход в приложение
   final Profile myprofile;
-  const Body({Key key, this.myprofile}) : super(key: key);
+  Body({Key key, this.myprofile}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +23,15 @@ class Body extends StatelessWidget {
               // и вызывается новый экран Профиля
               onPressed: () {
                 print("Go to event");
+                print(events.length);
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      // открываем экран профия
-                      builder: (context) => EventPageWithFoto(
-                          // для тестового примера
-                          ),
-                    ));
+                        // открываем экран профия
+                        builder: (context) => EventPage(
+                              event: events[0],
+                              myprofile: myprofile,
+                            )));
               }),
         ),
         Center(
@@ -41,6 +43,7 @@ class Body extends StatelessWidget {
               // и вызывается новый экран Профиля
               onPressed: () {
                 print("Go profile");
+                print(profiles.length);
                 Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -48,16 +51,6 @@ class Body extends StatelessWidget {
                               profile: profiles[0],
                               myprofile: myprofile,
                             )));
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //       // открываем экран профия
-                //       builder: (context) => ProfileScreen(
-                //         // для тестового примера запускаем первый из профилей
-                //         profile: profiles[0],
-                //         myprofile: myprofile,
-                //       ),
-                //     ));
               }),
         ),
       ],

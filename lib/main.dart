@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:so_demo/Screens/Welcome/welome_screen.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +25,6 @@ class MyApp extends StatelessWidget {
 // думается мне что необходимо раздлить описание класса профиля
 // и создание представителей класса профиль
 // чтобы не возникала путанница
-
 // необходимо понять как ссылаться в ивенте на профиль
 // мб стоит переименовать hostNick -> host
 // и сделать его представителем класса  Profile

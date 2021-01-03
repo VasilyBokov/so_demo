@@ -82,7 +82,7 @@ String simpleText = "Описание пользователя какой он �
 Profile myprofile = Profile(
     id: 1,
     marked: [],
-    nickname: 'Eva',
+    nickname: '',
     description: mysimpleText,
     image: "assets/guest_images/guest3.jpg",
     age: 25,
@@ -95,6 +95,6 @@ Profile myprofile = Profile(
       'zagon_baranov'
     ],
     subscriptions: ['olga_ananasova'],
-    password: "mama");
+    password: "");
 
 String mysimpleText = "Каждый делает то что";
