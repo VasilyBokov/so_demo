@@ -22,46 +22,45 @@ class ImageSliderCard extends StatefulWidget {
 class _ImageSliderCardState extends State<ImageSliderCard> {
   final ScrollController _controllerOne = ScrollController();
 
-// Check if the scrollController is attached to a scroll view by using its hasClients property first.
+// ScrollController хранится как переменная в объекте State, а
+//  сам объект State создан для того, чтобы хранить информацию
+//  о Statefull Widget. Сам контроллер создаёт объект класса
+//  ScrollPosition (Determines which portion of the content
+//  is visible in a scroll view.). Таким образом, ScrollController
+//  контроллирует состояние скроллящегося объекта, к которому
+//  он привязан.
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      // высота берётся так: высота карточки, которую указал аркаша+
+      // отступы сверху и снизу, они указываются ниже в паддинге
+      height: 190,
       child: CupertinoScrollbar(
         isAlwaysShown: true,
         controller: _controllerOne,
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 2.0),
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.topLeft,
-                height: 150,
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: imgList
-                        .map((item) => Card(
-                              semanticContainer: true,
-                              clipBehavior: Clip.antiAliasWithSaveLayer,
-                              margin: const EdgeInsets.symmetric(horizontal: 4),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16)),
-                              child: Center(
-                                child: Image.network(
-                                  item,
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ))
-                        .toList(),
-                  ),
-                ),
-              ),
-            ],
+          controller: _controllerOne,
+          padding: EdgeInsets.symmetric(vertical: 20.0),
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: imgList
+                .map((item) => Card(
+                      semanticContainer: true,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Center(
+                        child: Image.network(
+                          item,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ))
+                .toList(),
           ),
         ),
       ),
@@ -75,19 +74,22 @@ class ImageSlider extends StatefulWidget {
 }
 
 class _ImageSliderState extends State<ImageSlider> {
-  final ScrollController _controllerOne = ScrollController();
+  ScrollController _controllerOne = ScrollController();
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    _controllerOne = ScrollController(initialScrollOffset: 0.0);
+    //_controllerOne.jumpTo();
     return Container(
-      // Видимо, купертиноскроллбар является родителем некоторого
+      // Купертиноскроллбар является родителем некоторого
       // скролл объекта
       child: CupertinoScrollbar(
         isAlwaysShown: true,
         controller: _controllerOne,
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 2.0),
+          controller: _controllerOne,
+          padding: EdgeInsets.only(bottom: 20),
           physics: PageScrollPhysics(),
           scrollDirection: Axis.horizontal,
           child: Row(
