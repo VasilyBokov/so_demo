@@ -23,44 +23,54 @@ class Body extends StatelessWidget {
         designSize: Size(360, 720), allowFontScaling: true);
     // хотя в первой из 3 строчек я не уверен
     Size size = MediaQuery.of(context).size;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // для корректного отображения фото выбранного профиля
-        // передаем размер экрана и данные профиля
-        ProfileImage(size: size, profile: profile),
-        // для корректного отображения имени выбранного профиля
-        // передаем размер и данные профиля
-        NameAndDescription(size: size, profile: profile),
-        // для корректного отображения числа подписчиков
-        // и места жительства выбранного профиля
-        // передаем размер и данные профиля
-        SubscribersAndPlace(size: size, profile: profile),
-        // для корректного отображения состояния
-        // подписки на выбранный профиль
-        // передаем размер, данные моего_профиля и данные профиля
-        WidgetWithButton(size: size, myprofile: myprofile, profile: profile),
-        // просто надпись "Предстоящие"
-        Padding(
-          padding: EdgeInsets.only(left: 15, top: 30),
-          child: Text(
-            "Предстоящие",
-            style: kMTextStyleBlack4,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // для корректного отображения фото выбранного профиля
+          // передаем размер экрана и данные профиля
+          ProfileImage(size: size, profile: profile),
+          // для корректного отображения имени выбранного профиля
+          // передаем размер и данные профиля
+          NameAndDescription(size: size, profile: profile),
+          // для корректного отображения числа подписчиков
+          // и места жительства выбранного профиля
+          // передаем размер и данные профиля
+          SubscribersAndPlace(size: size, profile: profile),
+          // для корректного отображения состояния
+          // подписки на выбранный профиль
+          // передаем размер, данные моего_профиля и данные профиля
+          WidgetWithButton(size: size, myprofile: myprofile, profile: profile),
+          // просто надпись "Предстоящие"
+          Padding(
+            padding: EdgeInsets.only(left: 15, top: 30),
+            child: Text(
+              "Предстоящие",
+              style: kMTextStyleBlack4,
+            ),
           ),
-        ),
-        // Event  card
-        // пока что это не выделяется в отдельный ListView так как его включение
-        // в Column создает ошибку разметки (Семен: решу в будующем)
-        EventMiniCard(
-          myprofile: myprofile,
-          event: events[0],
-        ),
-        // Event card
-        EventMiniCard(
-          myprofile: myprofile,
-          event: events[1],
-        )
-      ],
+          // Event  card
+          // пока что это не выделяется в отдельный ListView так как его включение
+          // в Column создает ошибку разметки (Семен: решу в будующем)
+          EventMiniCard(
+            myprofile: myprofile,
+            event: events[0],
+          ),
+          // Event card
+          EventMiniCard(
+            myprofile: myprofile,
+            event: events[1],
+          ),
+          EventMiniCard(
+            myprofile: myprofile,
+            event: events[2],
+          ),
+          EventMiniCard(
+            myprofile: myprofile,
+            event: events[3],
+          )
+        ],
+      ),
     );
   }
 }

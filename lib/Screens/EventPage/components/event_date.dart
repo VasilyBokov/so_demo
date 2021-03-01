@@ -14,7 +14,7 @@ class EventDate extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: 64,
+      height: size.height * 0.089,
       child: Card(
         color: Colors.black,
         shape: RoundedRectangleBorder(
@@ -22,7 +22,7 @@ class EventDate extends StatelessWidget {
         ),
         elevation: 1,
         child: Row(
-          // Сеиен: я добавил  mainAxisAligement, чтобы эдементы располагались
+          // Семен: я добавил  mainAxisAligement, чтобы эдементы располагались
           // как можго дальше друг от друга
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -36,10 +36,13 @@ class EventDate extends StatelessWidget {
                     date,
                     style: kMTextStyleWhite5,
                   ),
-                  SizedBox(height: 5),
-                  Text(
-                    adress,
-                    style: kMTextStyleGrey6,
+                  SizedBox(height: 3),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 0),
+                    child: Text(
+                      adress,
+                      style: kMTextStyleGrey6,
+                    ),
                   ),
                   //SizedBox(height: 15),
                 ],
@@ -51,10 +54,10 @@ class EventDate extends StatelessWidget {
               child: JoinButton(
                 simpleevent: events[0],
                 myprofile: profiles[0],
-                buttonheight1: 44,
-                buttonwidth1: 98,
-                buttonheight2: 44,
-                buttonwidth2: 85,
+                // buttonheight1: 44,// 0.061
+                // buttonwidth1: 98,// 0.272
+                // buttonheight2: 44,// 0.061
+                // buttonwidth2: 85,// 0.236
               ),
             )
           ],

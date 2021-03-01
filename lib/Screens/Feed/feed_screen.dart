@@ -5,8 +5,7 @@ import 'package:so_demo/profile.dart';
 
 class FeedScreen extends StatelessWidget {
   final Profile myprofile;
-
-  const FeedScreen({Key key, this.myprofile}) : super(key: key);
+  FeedScreen({Key key, this.myprofile}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

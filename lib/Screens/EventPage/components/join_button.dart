@@ -57,7 +57,7 @@ class TapBox extends StatelessWidget {
   final Function onChanged;
   final Profile myprofile;
   final Event event;
-  final double buttonwidth1, buttonheight1, buttonwidth2, buttonheight2;
+  //final double, buttonwidth1, buttonheight1, buttonwidth2, buttonheight2;
 
   const TapBox({
     Key key,
@@ -65,10 +65,10 @@ class TapBox extends StatelessWidget {
     this.onChanged,
     this.myprofile,
     this.event,
-    this.buttonwidth1,
-    this.buttonheight1,
-    this.buttonheight2,
-    this.buttonwidth2,
+    // this.buttonwidth1,
+    // this.buttonheight1,
+    // this.buttonheight2,
+    // this.buttonwidth2,
   }) : super(key: key);
 
   void _handleTap() {
@@ -78,11 +78,12 @@ class TapBox extends StatelessWidget {
   }
 
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     // в случае если подписка оформлена
     if (event.participantsNicks.contains(myprofile.nickname)) {
       return Container(
-        height: buttonheight2,
-        width: buttonwidth2,
+        height: 0.061 * size.height,
+        width: 0.272 * size.width,
         // окантовка для кнопки
         child: ClipRRect(
           child: FlatButton(
@@ -102,8 +103,8 @@ class TapBox extends StatelessWidget {
       // если пользователь не тыкнул "пойду"
     } else {
       return Container(
-        height: buttonheight1,
-        width: buttonwidth1,
+        height: 0.061 * size.height,
+        width: 0.236 * size.width,
         child: ClipRRect(
           child: FlatButton(
             shape: RoundedRectangleBorder(
