@@ -9,6 +9,7 @@ import 'package:so_demo/style_guide.dart';
 class BodyWithFoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // Семен: зачем нужны двоеточия?
     event:
     events[0];
     myprofile:
