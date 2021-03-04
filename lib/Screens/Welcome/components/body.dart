@@ -55,7 +55,7 @@ class Body extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 45),
               ClickableText(
                 text: "Пропустить",
                 textStyle: kMTextStyleWhite5,

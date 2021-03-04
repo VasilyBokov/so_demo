@@ -12,16 +12,33 @@ class Background extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height,
-      width: double.infinity,
+      width: size.width,
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
+          Center(
+            child: Container(
+              //  не могу нормально расположить svg
+              // need any help from Bazil
+              padding: EdgeInsets.only(top: 80),
+              width: size.width,
+              height: size.height,
+              child: SvgPicture.asset(
+                "assets/images/Vector.svg",
+                width: 1.5 * size.width,
+                height: 1.5 * size.height,
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(bottom: 70),
             child: Container(
                 width: size.width,
+                // width: 200,
                 // height: 200,
-                child: SvgPicture.asset("assets/images/logo_so.svg")),
+                child: SvgPicture.asset("assets/images/logo_so.svg")
+                // child: SvgPicture.asset("assets/images/Vector.svg")
+                ),
           ),
           child
         ],

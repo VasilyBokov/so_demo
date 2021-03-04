@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:so_demo/Screens/EventPage/event_page_f.dart';
+import 'package:so_demo/Screens/EventPage/components/body_f.dart';
+// import 'package:so_demo/Screens/EventPage/event_page.dart';
 import 'package:so_demo/Screens/Profile/profile_screen.dart';
 import 'package:so_demo/components/event_card.dart';
 import 'package:so_demo/profile.dart';
@@ -25,6 +26,9 @@ class Body extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(left: 5, top: 25),
           child: Container(
+            // Это контейнер верхней части ленты,
+            // содердит ссылку на профиль и уведомления, и не скролится
+            // так же как т в инстаграмме
             // color: Colors.red[50],
             // height: 100,
             child: Row(
@@ -58,12 +62,16 @@ class Body extends StatelessWidget {
                     print("Go to event");
                     Navigator.push(
                         context,
+                        //
+                        // Тут какая то ошибка. Вася вернется и наведет порядок (ошибка и в импорте)
+                        //
                         MaterialPageRoute(
-                          // открываем экран профия
-                          builder: (context) => EventMiniCard(
-                              // для тестового примера
-                              ),
-                        ));
+                            // открываем экран профия
+                            // (where is this class?)
+                            // builder: (context) => EventPage(
+                            // для тестового примера
+                            // ),
+                            ));
                   }),
             ),
             Center(
