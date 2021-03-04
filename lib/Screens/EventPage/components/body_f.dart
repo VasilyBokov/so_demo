@@ -22,7 +22,7 @@ class BodyWithFoto extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: [
-                ImageSliderDemo(),
+                ImageSliderCard(),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 36, 0, 0),
                   child: Row(

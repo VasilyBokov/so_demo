@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-<<<<<<< HEAD
-import 'package:so_demo/Screens/EventPage/event_page_f.dart';
-=======
-import 'package:so_demo/Screens/EventPage/event_page.dart';
->>>>>>> 0e5aaa623a0d340b2a334ec8ca94a75f77442473
+// import 'package:so_demo/Screens/EventPage/event_page_f.dart';
 import 'package:so_demo/Screens/Profile/profile_screen.dart';
+import 'package:so_demo/components/event_card.dart';
 import 'package:so_demo/profile.dart';
 import 'package:so_demo/event.dart';
 
@@ -62,19 +59,11 @@ class Body extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-<<<<<<< HEAD
                           // открываем экран профия
-                          builder: (context) => EventPageWithFoto(
+                          builder: (context) => EventMiniCard(
                               // для тестового примера
                               ),
                         ));
-=======
-                            // открываем экран профия
-                            builder: (context) => EventPage(
-                                  event: events[0],
-                                  myprofile: myprofile,
-                                )));
->>>>>>> 0e5aaa623a0d340b2a334ec8ca94a75f77442473
                   }),
             ),
             Center(
