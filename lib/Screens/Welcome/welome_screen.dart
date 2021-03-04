@@ -15,6 +15,7 @@ class WelcomeScreen extends StatelessWidget {
       systemNavigationBarColor: Color(0xFF000000),
     ));
     return Scaffold(
+      // мб переписать для грамотного отображения svg
       body: Body(),
     );
   }

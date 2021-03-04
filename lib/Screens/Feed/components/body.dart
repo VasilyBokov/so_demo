@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:so_demo/Screens/EventPage/components/body_f.dart';
+import 'package:so_demo/Screens/Notifications/notifications_screen.dart';
 // import 'package:so_demo/Screens/EventPage/event_page.dart';
 import 'package:so_demo/Screens/Profile/profile_screen.dart';
 import 'package:so_demo/components/event_card.dart';
@@ -37,7 +38,12 @@ class Body extends StatelessWidget {
                 IconButton(
                   iconSize: 25,
                   icon: SvgPicture.asset("assets/icons/notification.svg"),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NotificationsScreen()));
+                  },
                 ),
                 IconButton(
                   iconSize: 25,
