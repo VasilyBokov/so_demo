@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:so_demo/Screens/Notifications/components/body.dart';
+import 'package:so_demo/profile.dart';
 import 'package:so_demo/style_guide.dart';
 
 class NotificationsScreen extends StatelessWidget {
@@ -41,7 +42,7 @@ class NotificationsScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Body(),
+      body: Body(userprofile: myprofile),
     );
   }
 }
