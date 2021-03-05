@@ -35,3 +35,4 @@ class MyApp extends StatelessWidget {
 // мб вариант dd:mm:yyyy
 
 // задать шрифты через em и rem
+// найти подходящую иконку для приложения
