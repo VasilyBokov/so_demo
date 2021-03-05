@@ -45,6 +45,45 @@ class Body extends StatelessWidget {
                             builder: (context) => NotificationsScreen()));
                   },
                 ),
+                Container(
+                  // Централная штука для выбора чего то
+                  //
+                  width: 66,
+                  height: 26,
+                  decoration: BoxDecoration(
+                      color: Colors.grey[100],
+                      border: Border.all(color: Colors.grey[100]),
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        width: 30,
+                        child: IconButton(
+                            iconSize: 20,
+                            padding: EdgeInsets.zero,
+                            icon: Icon(
+                              Icons.dehaze,
+                              size: 17,
+                            ),
+                            onPressed: () {}),
+                      ),
+                      Container(
+                        width: 30,
+                        child: IconButton(
+                            padding: EdgeInsets.zero,
+                            iconSize: 20,
+                            icon: Icon(
+                              Icons.clear,
+                              size: 17,
+                            ),
+                            onPressed: () {}),
+                      )
+                    ],
+                  ),
+                ),
                 IconButton(
                   iconSize: 25,
                   icon: SvgPicture.asset("assets/icons/profile.svg"),
@@ -64,21 +103,23 @@ class Body extends StatelessWidget {
                   icon: Icon(Icons.picture_in_picture_alt),
                   // при нажатии выводится текст в консоль
                   // и вызывается новый экран Профиля
-                  onPressed: () {
-                    print("Go to event");
-                    Navigator.push(
-                        context,
-                        //
-                        // Тут какая то ошибка. Вася вернется и наведет порядок (ошибка и в импорте)
-                        //
-                        MaterialPageRoute(
-                            // открываем экран профия
-                            // (where is this class?)
-                            // builder: (context) => EventPage(
-                            // для тестового примера
-                            // ),
-                            ));
-                  }),
+                  onPressed: () {}
+                  // {
+                  //   print("Go to event");
+                  //   Navigator.push(
+                  //       context,
+                  //       //
+                  //       // Тут какая то ошибка. Вася вернется и наведет порядок (ошибка и в импорте)
+                  //       //
+                  //       MaterialPageRoute(
+                  //           // открываем экран профия
+                  //           // (where is this class?)
+                  //           // builder: (context) => EventPage(
+                  //           // для тестового примера
+                  //           // ),
+                  //           ));
+                  // }
+                  ),
             ),
             Center(
               child: IconButton(
